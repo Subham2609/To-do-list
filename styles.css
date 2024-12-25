@@ -1,0 +1,114 @@
+/* Funky Animated Background */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s infinite alternate;
+    font-family: 'Comic Sans MS', sans-serif;
+    overflow: hidden;
+  }
+  
+  @keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* To-Do List Container */
+  .todo-container {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Input Section */
+  .input-section {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #taskInput {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  #addTaskBtn {
+    padding: 12px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border: none;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #addTaskBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Task List */
+  #taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    color: #333;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .task-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .task-item.completed {
+    text-decoration: line-through;
+    color: #777;
+    background: linear-gradient(135deg, #d1d1d1, #b8b8b8);
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    transform: scale(1.2);
+    color: #ff0000;
+  }
